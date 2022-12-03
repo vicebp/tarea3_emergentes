@@ -14,6 +14,7 @@ Todas las solicitudes a la API requieren el uso de una API KEY generada. Para au
 
 ## crear compañia
 - endpint: http://54.159.58.120:3000/api/v1/admin/create-company
+- POST
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -28,6 +29,7 @@ companys existentes
 
 ## crear locación
 - endpint: http://54.159.58.120:3000/api/v1/admin/create-location/:company_api_key
+- POST
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -41,6 +43,7 @@ companys existentes
 
 ## crear sensor
 - endpint: http://54.159.58.120:3000/api/v1/admin/create-sensor
+-POST
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -60,6 +63,7 @@ companys existentes
 
 ## Muestra todo
 - endpint: http://54.159.58.120:3000/api/v1/location/:company_api_key/:company_id
+- GET
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -69,6 +73,7 @@ companys existentes
 ## Muestra uno
 
 - endpint: http://54.159.58.120:3000/api/v1/location/one-location/:company_api_key/:company_id/:location_id
+- GET
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -80,6 +85,7 @@ companys existentes
 
 ## Edita
 - endpint: http://54.159.58.120:3000/api/v1/location/edit-location/:company_api_key/:company_id/:location_id
+- PUT
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -94,6 +100,7 @@ companys existentes
 
 ## Elimina
 - endpint: http://54.159.58.120:3000/api/v1/location/delete-location/:company_api_key/:company_id/:location_id
+- DELETE
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -110,6 +117,7 @@ companys existentes
 
 ## Muestra todo
 - endpint: http://54.159.58.120:3000/api/v1/sensor/:company_api_key/:company_id/
+- GET
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -120,6 +128,7 @@ companys existentes
 ## Muestra uno
 
 - endpint: http://54.159.58.120:3000/api/v1/sensor/one-sensor/:company_api_key/:company_id/:id_sensor
+- GET
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -131,6 +140,7 @@ companys existentes
 
 ## Edita
 - endpint: http://54.159.58.120:3000/api/v1/sensor/edit-sensor/:company_api_key/:company_id/:id_sensor
+- PUT
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -145,6 +155,7 @@ companys existentes
 
 ## Elimina
 - endpint: http://54.159.58.120:3000/api/v1/sensor/delte-sensor/:company_api_key/:company_id/:location_id
+- DELETE
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -159,6 +170,7 @@ companys existentes
 
 ## Insert
 - endpint: http://54.159.58.120:3000/api/v1/sensor_data
+- POST
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -168,6 +180,8 @@ companys existentes
 
 ## Get
 - endpint: http://54.159.58.120:3000/api/v1/sensor_data/:company_api_key/:from/:to/:array_sensors
+- GET 
+
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
 | ------------- | ------------- | ------------- |
