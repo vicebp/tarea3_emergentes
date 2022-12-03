@@ -43,7 +43,7 @@ companys existentes
 
 ## crear sensor
 - endpint: http://54.159.58.120:3000/api/v1/admin/create-sensor
--POST
+- POST
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
