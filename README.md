@@ -13,17 +13,21 @@ Todas las solicitudes a la API requieren el uso de una API KEY generada. Para au
 - Este puede crear sensores
 
 ## crear compañia
-- endpint: http://54.159.58.120:3000/create-company
+- endpint: http://54.159.58.120:3000/api/v1/admin/create-company
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
 | ------------- | ------------- | ------------- |
 | company_name  | String | Requerido. Nombre de la compañia, enviado por Body en formato json|
 
-por consola se podrá ver el company_api_key generado para que el profesor pueda realizar las diferentes pruebas
+companys existentes
+
+1,facebook,6LZs3BFaybAFh77F1VJie7
+2,google,NBmJCx1xpawCfjp1x1ggjR
+3,amazon,QA9NDY5uksarXjEAyRKf9n
 
 ## crear locación
-- endpint: http://54.159.58.120:3000/create-location/:company_api_key
+- endpint: http://54.159.58.120:3000/api/v1/admin/create-location/:company_api_key
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -36,7 +40,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 | company_api_key  | String | Requerido. API KEY de la compañia, enviado por Header|
 
 ## crear sensor
-- endpint: http://54.159.58.120:3000/create-sensor
+- endpint: http://54.159.58.120:3000/api/v1/admin/create-sensor
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -55,7 +59,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 - Elimina 
 
 ## Muestra todo
-- endpint: http://54.159.58.120:3000/:company_api_key/:company_id
+- endpint: http://54.159.58.120:3000/api/v1/location/:company_api_key/:company_id
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -64,7 +68,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 | company_api_key  | String |  Requerido. API KEY de la compañia, enviado por Header|
 ## Muestra uno
 
-- endpint: http://54.159.58.120:3000/:company_api_key/one-location/:company_api_key/:company_id/:location_id
+- endpint: http://54.159.58.120:3000/api/v1/location/one-location/:company_api_key/:company_id/:location_id
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -75,7 +79,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 
 
 ## Edita
-- endpint: http://54.159.58.120:3000/edit-location/:company_api_key/:company_id/:location_id
+- endpint: http://54.159.58.120:3000/api/v1/location/edit-location/:company_api_key/:company_id/:location_id
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -89,7 +93,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 | location_meta  | String | Requerido. Meta de la locacion, enviado por Body en formato json|
 
 ## Elimina
-- endpint: http://54.159.58.120:3000/edit-location/:company_api_key/:company_id/:location_id
+- endpint: http://54.159.58.120:3000/api/v1/location/delete-location/:company_api_key/:company_id/:location_id
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -105,7 +109,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 - Elimina 
 
 ## Muestra todo
-- endpint: http://54.159.58.120:3000/:company_api_key/:company_id/
+- endpint: http://54.159.58.120:3000/api/v1/sensor/:company_api_key/:company_id/
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -115,7 +119,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 
 ## Muestra uno
 
-- endpint: http://54.159.58.120:3000/one-sensor/:company_api_key/:company_id/:id_sensor
+- endpint: http://54.159.58.120:3000/api/v1/sensor/one-sensor/:company_api_key/:company_id/:id_sensor
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -126,7 +130,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 
 
 ## Edita
-- endpint: http://54.159.58.120:3000/edit-location/:company_api_key/:company_id/:location_id
+- endpint: http://54.159.58.120:3000/api/v1/sensor/edit-sensor/:company_api_key/:company_id/:id_sensor
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -140,7 +144,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 
 
 ## Elimina
-- endpint: http://54.159.58.120:3000/edit-location/:company_api_key/:company_id/:location_id
+- endpint: http://54.159.58.120:3000/api/v1/sensor/delte-sensor/:company_api_key/:company_id/:location_id
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -154,7 +158,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 - Get 
 
 ## Insert
-- endpint: http://54.159.58.120:3000/sensor_data
+- endpint: http://54.159.58.120:3000/api/v1/sensor_data
 
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
@@ -163,8 +167,7 @@ por consola se podrá ver el company_api_key generado para que el profesor pueda
 | sensor_api_key  | Integer | Requerido. API KEY del sensor enviado por Body en formato json|
 
 ## Get
-- endpint: http://54.159.58.120:3000/:company_api_key/:from/:to/:array_sensors
-
+- endpint: http://54.159.58.120:3000/api/v1/sensor_data/:company_api_key/:from/:to/:array_sensors
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
 | ------------- | ------------- | ------------- |
