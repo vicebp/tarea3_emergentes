@@ -48,11 +48,10 @@ companys existentes
 ### Parametros
 | Nombre  | Tipo  | Descripcion | 
 | ------------- | ------------- | ------------- |
-| location_id  | Integer | Requerido. Nombre de la compañia, enviado por Body en formato json|
-| sensor_name  | String | Requerido. Nombre de la compañia, enviado por Body en formato json|
-| sensor_category  | String | Requerido. Nombre de la compañia, enviado por Body en formato json|
-| location_city  | String | Requerido. Nombre de la compañia, enviado por Body en formato json|
-| sensor_meta  | String | Requerido. Nombre de la compañia, enviado por Body en formato json|
+| location_id  | Integer | Requerido. ID location, enviado por Body en formato json|
+| sensor_name  | String | Requerido. Nombre del sensor, enviado por Body en formato json|
+| sensor_category  | String | Requerido. Categoria sensor, enviado por Body en formato json|
+| sensor_meta  | String | Requerido. Meta sensor, enviado por Body en formato json|
 
 
 # Location
